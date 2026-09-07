@@ -33,5 +33,5 @@ Data belongs to its operators: [De Waterbus](https://dewaterbus.be/) and
 unmodified, for use by one app. Refer to the operators for anything
 authoritative — a timetable here can be up to a day behind theirs.
 
-Last built 2026-09-07T21:49:18Z from commit
-`fe09eca59309`.
+Last built 2026-09-07T22:08:35Z from commit
+`1b0465df727f`.
