@@ -1,0 +1,115 @@
+{
+  "source": "https://dewaterbus.be/en/pages/rates",
+  "captured_at": "2026-09-07",
+  "currency": "EUR",
+  "notes": [
+    "Scraped by tools/scrape/waterbus_fares.py from https://dewaterbus.be/en/pages/rates.",
+    "De Waterbus is the only paid crossing in this app: the live status API reports paying=false for both tunnels and for the Sint-Anna veerdienst.",
+    "'zones' carries the boundaries and the prices. The rule that a trip spanning two zones costs the sum of both zone fares lives in the app (CrossingAdvisor), not here -- it is logic, not a published price.",
+    "'from' and 'to' are the app's own stop keys, so a zone can be resolved against waterbus.json's stop order directly.",
+    "Prices are single-trip normal fares unless the key says otherwise. 'reduced' applies on presentation of valid ID; see 'reductions'."
+  ],
+  "multi_zone_rule": "sum_of_zone_fares",
+  "zones": {
+    "1": {
+      "name": "South",
+      "from": "hemiksem",
+      "to": "sint_anna",
+      "single": {
+        "normal": 4.0,
+        "reduced": 3.5
+      },
+      "return": {
+        "normal": 6.0,
+        "reduced": 5.0
+      }
+    },
+    "2": {
+      "name": "City",
+      "from": "steenplein",
+      "to": "sint_anna",
+      "single": {
+        "normal": 1.0
+      },
+      "return": {
+        "normal": 1.0
+      },
+      "monthly": {
+        "normal": 15.0
+      },
+      "annual": {
+        "normal": 125.0
+      }
+    },
+    "3": {
+      "name": "North",
+      "from": "steenplein",
+      "to": "lillo",
+      "single": {
+        "normal": 4.0,
+        "reduced": 3.5
+      },
+      "return": {
+        "normal": 6.0,
+        "reduced": 5.0
+      }
+    },
+    "4": {
+      "name": "Port transfer",
+      "from": "liefkenshoek",
+      "to": "lillo",
+      "single": {
+        "normal": 1.0
+      },
+      "return": {
+        "normal": 1.0
+      },
+      "monthly": {
+        "normal": 15.0
+      },
+      "annual": {
+        "normal": 125.0
+      }
+    }
+  },
+  "passes": {
+    "ten_journey": {
+      "normal": 24.0,
+      "reduced": 21.0
+    },
+    "day_ticket": {
+      "normal": 15.0,
+      "reduced": 13.0
+    },
+    "monthly": {
+      "normal": 70.0,
+      "reduced": 60.0
+    },
+    "annual": {
+      "normal": 685.0,
+      "reduced": 565.0
+    }
+  },
+  "reductions": [
+    {
+      "who": "Children up to 5 years old",
+      "fare": "Free"
+    },
+    {
+      "who": "Young people aged 6 to 24",
+      "fare": "Reduction"
+    },
+    {
+      "who": "+65 years",
+      "fare": "Reduction"
+    },
+    {
+      "who": "Person With Disability",
+      "fare": "Reduction"
+    },
+    {
+      "who": "Bicycle / scooter",
+      "fare": "Can come for free"
+    }
+  ]
+}

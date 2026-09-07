@@ -10,8 +10,9 @@ workflow that writes this live in a separate private repository.
 
 | File | Size |
 | --- | --- |
-| [`v1/sint_anna_ferry.json`](v1/sint_anna_ferry.json) | 6,698 bytes |
+| [`v1/sint_anna_ferry.json`](v1/sint_anna_ferry.json) | 6,631 bytes |
 | [`v1/waterbus.json`](v1/waterbus.json) | 66,511 bytes |
+| [`v1/waterbus_fares.json`](v1/waterbus_fares.json) | 2,663 bytes |
 | [`v1/index.json`](v1/index.json) | manifest |
 
 Served over GitHub Pages with `ETag`, so a conditional request costs nothing
@@ -32,5 +33,5 @@ Data belongs to its operators: [De Waterbus](https://dewaterbus.be/) and
 unmodified, for use by one app. Refer to the operators for anything
 authoritative — a timetable here can be up to a day behind theirs.
 
-Last built 2026-09-07T19:28:45Z from commit
-`caa7b6cf779e`.
+Last built 2026-09-07T20:47:47Z from commit
+`cd8a2cf8137f`.

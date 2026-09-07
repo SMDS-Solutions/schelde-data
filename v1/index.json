@@ -1,15 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-07T19:28:45Z",
-  "source_commit": "caa7b6cf779ee0dc9132ab6a73e0ec7166dbf582",
+  "generated_at": "2026-09-07T20:47:47Z",
+  "source_commit": "cd8a2cf8137fb890abfa3ccefe5ff0022f9e471a",
   "files": {
     "waterbus.json": {
       "bytes": 66511,
       "sha256": "3aff221be26e42729890986e81c7c0305f8660a9002711148edef1b6f0387836"
     },
     "sint_anna_ferry.json": {
-      "bytes": 6698,
-      "sha256": "8ee4228714c3ca7ca56113bdf00cb2286c41717c29f14d1c9821f96f3a89c973"
+      "bytes": 6631,
+      "sha256": "676174180465a8c4c43fd5c39e0e24519903646312dab65f6b4c5a875e5f76ec"
+    },
+    "waterbus_fares.json": {
+      "bytes": 2663,
+      "sha256": "3de21ddcdda4f97d3070af88e2624f9bb523ade6f01c241be953108555ad621f"
     }
   }
 }

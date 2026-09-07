@@ -27,9 +27,6 @@
     "max_width_cm": 75,
     "max_length_cm": 120
   },
-  "fare_eur": {
-    "city_crossing_steenplein_sint_anna": 1.0
-  },
   "timetable": {
     "weekday": {
       "linkeroever_to_het_steen": [
