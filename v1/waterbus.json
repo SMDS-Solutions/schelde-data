@@ -1,0 +1,2529 @@
+{
+  "source": "https://dewaterbus.be/en/pages/schedule (live DOM scrape via Chrome browser automation)",
+  "captured_at": "2026-08-26",
+  "notes": [
+    "Re-scraped 2026-08-26 (superseding the 2026-08-24 capture) specifically to detect and exclude struck-through cells: the live table marks a cancelled/non-running departure by wrapping its cell text in <s></s> instead of a plain <div>; a per-cell check for that <s> tag was used to exclude those times, in addition to the existing literal '-' filter.",
+    "Trips left with zero valid stop times after strikethrough filtering (i.e. every cell in that trip's column was struck through) were dropped entirely from the 'trips' array.",
+    "'north_to_south' stop order: Lillo, Liefkenshoek, Kallosluis, Zwijndrecht, Sint Anna, Steenplein, Kruibeke, Hemiksem. 'south_to_north' stop order is the reverse (Hemiksem...Lillo); note the stop label is 'Kallo' not 'Kallosluis' in this direction's table but it's the same physical stop.",
+    "Confirms the user-reported issue: north_to_south/weekday trip T29 (ship D4) has its Sint Anna cell struck-through live (kept Steenplein/Kruibeke/Hemiksem, which are not struck) -- so De Waterbus no longer offers 19:20 as a Sint Anna departure; the next one is trip T30 (ship D5) at 19:50, which is not struck.",
+    "day_type 'weekend_holiday' split into 'saturday' and 'sunday_holiday' blocks per the site's own tabs -- they were identical in the 2026-08-24 capture but are captured independently again here in case they've diverged.",
+    "All times are Europe/Brussels local (as displayed on the site)."
+  ],
+  "north_to_south": {
+    "weekday": {
+      "stops_order": [
+        "Lillo",
+        "Liefkenshoek",
+        "Kallosluis",
+        "Zwijndrecht",
+        "Sint Anna",
+        "Steenplein",
+        "Kruibeke",
+        "Hemiksem"
+      ],
+      "trips": [
+        {
+          "trip": "T1",
+          "ship": "D3",
+          "times": {
+            "Kallosluis": "05:22",
+            "Zwijndrecht": "05:29",
+            "Sint Anna": "05:50",
+            "Steenplein": "06:00",
+            "Kruibeke": "06:17",
+            "Hemiksem": "06:30"
+          }
+        },
+        {
+          "trip": "T2",
+          "ship": "D1",
+          "times": {
+            "Lillo": "05:30",
+            "Liefkenshoek": "05:35",
+            "Kallosluis": "05:52",
+            "Zwijndrecht": "05:59",
+            "Sint Anna": "06:20",
+            "Steenplein": "06:30",
+            "Hemiksem": "07:00"
+          }
+        },
+        {
+          "trip": "T3",
+          "ship": "D2",
+          "times": {
+            "Lillo": "06:00",
+            "Liefkenshoek": "06:05",
+            "Kallosluis": "06:22",
+            "Zwijndrecht": "06:29",
+            "Sint Anna": "06:50",
+            "Steenplein": "07:00",
+            "Kruibeke": "07:17",
+            "Hemiksem": "07:30"
+          }
+        },
+        {
+          "trip": "T4",
+          "ship": "D4",
+          "times": {
+            "Sint Anna": "07:20",
+            "Steenplein": "07:30",
+            "Hemiksem": "08:00"
+          }
+        },
+        {
+          "trip": "T5",
+          "ship": "D5",
+          "times": {
+            "Lillo": "07:00",
+            "Liefkenshoek": "07:05",
+            "Kallosluis": "07:22",
+            "Zwijndrecht": "07:29",
+            "Sint Anna": "07:50",
+            "Steenplein": "08:00",
+            "Kruibeke": "08:17",
+            "Hemiksem": "08:30"
+          }
+        },
+        {
+          "trip": "T6",
+          "ship": "D6",
+          "times": {
+            "Steenplein": "08:30",
+            "Kruibeke": "08:47",
+            "Hemiksem": "09:00"
+          }
+        },
+        {
+          "trip": "T7",
+          "ship": "D3",
+          "times": {
+            "Lillo": "08:00",
+            "Liefkenshoek": "08:05",
+            "Kallosluis": "08:22",
+            "Zwijndrecht": "08:29",
+            "Sint Anna": "08:50",
+            "Steenplein": "09:00",
+            "Kruibeke": "09:17",
+            "Hemiksem": "09:30"
+          }
+        },
+        {
+          "trip": "T8",
+          "ship": "D1",
+          "times": {
+            "Lillo": "08:30",
+            "Liefkenshoek": "08:35",
+            "Kallosluis": "08:52",
+            "Zwijndrecht": "08:59",
+            "Sint Anna": "09:20",
+            "Steenplein": "09:30",
+            "Kruibeke": "09:47",
+            "Hemiksem": "10:00"
+          }
+        },
+        {
+          "trip": "T9",
+          "ship": "D2",
+          "times": {
+            "Lillo": "09:00",
+            "Liefkenshoek": "09:05",
+            "Kallosluis": "09:22",
+            "Zwijndrecht": "09:29",
+            "Sint Anna": "09:50",
+            "Steenplein": "10:00",
+            "Kruibeke": "10:17",
+            "Hemiksem": "10:30"
+          }
+        },
+        {
+          "trip": "T11",
+          "ship": "D5",
+          "times": {
+            "Lillo": "10:00",
+            "Liefkenshoek": "10:05",
+            "Kallosluis": "10:22",
+            "Zwijndrecht": "10:29",
+            "Sint Anna": "10:50",
+            "Steenplein": "11:00",
+            "Kruibeke": "11:17",
+            "Hemiksem": "11:30"
+          }
+        },
+        {
+          "trip": "T12",
+          "ship": "D6",
+          "times": {
+            "Lillo": "10:30",
+            "Liefkenshoek": "10:35",
+            "Kallosluis": "10:52",
+            "Zwijndrecht": "10:59",
+            "Sint Anna": "11:20",
+            "Steenplein": "11:30",
+            "Kruibeke": "11:47",
+            "Hemiksem": "12:00"
+          }
+        },
+        {
+          "trip": "T13",
+          "ship": "D3",
+          "times": {
+            "Lillo": "11:00",
+            "Liefkenshoek": "11:05",
+            "Kallosluis": "11:22",
+            "Zwijndrecht": "11:29",
+            "Sint Anna": "11:50",
+            "Steenplein": "12:00",
+            "Kruibeke": "12:17",
+            "Hemiksem": "12:30"
+          }
+        },
+        {
+          "trip": "T14",
+          "ship": "D1",
+          "times": {
+            "Lillo": "11:30",
+            "Liefkenshoek": "11:35",
+            "Kallosluis": "11:52",
+            "Zwijndrecht": "11:59",
+            "Sint Anna": "12:20"
+          }
+        },
+        {
+          "trip": "T15",
+          "ship": "D2",
+          "times": {
+            "Lillo": "12:00",
+            "Liefkenshoek": "12:05",
+            "Kallosluis": "12:22",
+            "Zwijndrecht": "12:29",
+            "Sint Anna": "12:50",
+            "Steenplein": "13:00",
+            "Kruibeke": "13:17",
+            "Hemiksem": "13:30"
+          }
+        },
+        {
+          "trip": "T17",
+          "ship": "D5",
+          "times": {
+            "Lillo": "13:00",
+            "Liefkenshoek": "13:05",
+            "Kallosluis": "13:22",
+            "Zwijndrecht": "13:29",
+            "Sint Anna": "13:50",
+            "Steenplein": "14:00",
+            "Kruibeke": "14:17",
+            "Hemiksem": "14:30"
+          }
+        },
+        {
+          "trip": "T18",
+          "ship": "D6",
+          "times": {
+            "Lillo": "13:30",
+            "Liefkenshoek": "13:35",
+            "Kallosluis": "13:52",
+            "Zwijndrecht": "13:59",
+            "Sint Anna": "14:20",
+            "Steenplein": "14:30",
+            "Kruibeke": "14:47",
+            "Hemiksem": "15:00"
+          }
+        },
+        {
+          "trip": "T19",
+          "ship": "D1",
+          "times": {
+            "Lillo": "13:45",
+            "Liefkenshoek": "13:50",
+            "Kallosluis": "14:15",
+            "Zwijndrecht": "14:22",
+            "Sint Anna": "14:43"
+          }
+        },
+        {
+          "trip": "T20",
+          "ship": "D3",
+          "times": {
+            "Lillo": "14:00",
+            "Liefkenshoek": "14:05",
+            "Kallosluis": "14:30",
+            "Steenplein": "15:00",
+            "Kruibeke": "15:17",
+            "Hemiksem": "15:30"
+          }
+        },
+        {
+          "trip": "T21",
+          "ship": "D1",
+          "times": {
+            "Sint Anna": "15:20",
+            "Steenplein": "15:30",
+            "Kruibeke": "15:47",
+            "Hemiksem": "16:00"
+          }
+        },
+        {
+          "trip": "T22",
+          "ship": "D2",
+          "times": {
+            "Lillo": "15:00",
+            "Liefkenshoek": "15:05",
+            "Kallosluis": "15:22",
+            "Zwijndrecht": "15:29",
+            "Sint Anna": "15:50",
+            "Steenplein": "16:00",
+            "Kruibeke": "16:17",
+            "Hemiksem": "16:30"
+          }
+        },
+        {
+          "trip": "T24",
+          "ship": "D5",
+          "times": {
+            "Lillo": "16:00",
+            "Liefkenshoek": "16:05",
+            "Kallosluis": "16:22",
+            "Zwijndrecht": "16:29",
+            "Sint Anna": "16:50",
+            "Steenplein": "17:00",
+            "Kruibeke": "17:17",
+            "Hemiksem": "17:30"
+          }
+        },
+        {
+          "trip": "T25",
+          "ship": "D6",
+          "times": {
+            "Lillo": "16:30",
+            "Liefkenshoek": "16:35",
+            "Kallosluis": "16:52",
+            "Zwijndrecht": "16:59",
+            "Sint Anna": "17:20",
+            "Steenplein": "17:30",
+            "Kruibeke": "17:47",
+            "Hemiksem": "18:00"
+          }
+        },
+        {
+          "trip": "T26",
+          "ship": "D3",
+          "times": {
+            "Lillo": "17:00",
+            "Liefkenshoek": "17:05",
+            "Kallosluis": "17:22",
+            "Zwijndrecht": "17:29",
+            "Sint Anna": "17:50",
+            "Steenplein": "18:00",
+            "Kruibeke": "18:17",
+            "Hemiksem": "18:30"
+          }
+        },
+        {
+          "trip": "T27",
+          "ship": "D1",
+          "times": {
+            "Lillo": "17:30",
+            "Liefkenshoek": "17:35",
+            "Kallosluis": "17:52",
+            "Zwijndrecht": "17:59",
+            "Sint Anna": "18:20",
+            "Steenplein": "18:30",
+            "Kruibeke": "18:47",
+            "Hemiksem": "19:00"
+          }
+        },
+        {
+          "trip": "T28",
+          "ship": "D2",
+          "times": {
+            "Lillo": "18:00",
+            "Liefkenshoek": "18:05",
+            "Kallosluis": "18:22",
+            "Zwijndrecht": "18:29",
+            "Sint Anna": "18:50",
+            "Steenplein": "19:00",
+            "Kruibeke": "19:17",
+            "Hemiksem": "19:30"
+          }
+        },
+        {
+          "trip": "T29",
+          "ship": "D4",
+          "times": {
+            "Steenplein": "19:30",
+            "Kruibeke": "19:47",
+            "Hemiksem": "20:00"
+          }
+        },
+        {
+          "trip": "T30",
+          "ship": "D5",
+          "times": {
+            "Lillo": "19:00",
+            "Liefkenshoek": "19:05",
+            "Kallosluis": "19:22",
+            "Zwijndrecht": "19:29",
+            "Sint Anna": "19:50"
+          }
+        },
+        {
+          "trip": "T31",
+          "ship": "D6",
+          "times": {
+            "Lillo": "19:30",
+            "Liefkenshoek": "19:35",
+            "Kallosluis": "19:52",
+            "Zwijndrecht": "19:59",
+            "Sint Anna": "20:20"
+          }
+        },
+        {
+          "trip": "T32",
+          "ship": "D3",
+          "times": {
+            "Lillo": "20:00",
+            "Liefkenshoek": "20:05",
+            "Kallosluis": "20:22",
+            "Zwijndrecht": "20:29",
+            "Sint Anna": "20:50"
+          }
+        },
+        {
+          "trip": "T34",
+          "ship": "D2",
+          "times": {
+            "Lillo": "21:00",
+            "Liefkenshoek": "21:05",
+            "Kallosluis": "21:22",
+            "Zwijndrecht": "21:29",
+            "Sint Anna": "21:50"
+          }
+        },
+        {
+          "trip": "T35",
+          "ship": "D4",
+          "times": {
+            "Lillo": "21:30",
+            "Liefkenshoek": "21:35",
+            "Kallosluis": "22:15",
+            "Zwijndrecht": "22:22",
+            "Sint Anna": "22:43"
+          }
+        },
+        {
+          "trip": "T36",
+          "ship": "D3",
+          "times": {
+            "Lillo": "22:00",
+            "Liefkenshoek": "22:05",
+            "Kallosluis": "22:30"
+          }
+        },
+        {
+          "trip": "T38",
+          "ship": "D2",
+          "times": {
+            "Lillo": "23:00",
+            "Liefkenshoek": "23:05",
+            "Kallosluis": "23:22",
+            "Zwijndrecht": "23:29",
+            "Sint Anna": "23:50"
+          }
+        }
+      ]
+    },
+    "saturday": {
+      "stops_order": [
+        "Lillo",
+        "Liefkenshoek",
+        "Kallosluis",
+        "Zwijndrecht",
+        "Sint Anna",
+        "Steenplein",
+        "Kruibeke",
+        "Hemiksem"
+      ],
+      "trips": [
+        {
+          "trip": "T1",
+          "ship": "D3",
+          "times": {
+            "Kallosluis": "05:22",
+            "Zwijndrecht": "05:29",
+            "Sint Anna": "05:50"
+          }
+        },
+        {
+          "trip": "T2",
+          "ship": "D1",
+          "times": {
+            "Lillo": "05:30",
+            "Liefkenshoek": "05:35",
+            "Kallosluis": "05:52",
+            "Zwijndrecht": "05:59",
+            "Sint Anna": "06:20"
+          }
+        },
+        {
+          "trip": "T3",
+          "ship": "D2",
+          "times": {
+            "Lillo": "06:00",
+            "Liefkenshoek": "06:05",
+            "Kallosluis": "06:22",
+            "Zwijndrecht": "06:29",
+            "Sint Anna": "06:50"
+          }
+        },
+        {
+          "trip": "T5",
+          "ship": "D3",
+          "times": {
+            "Lillo": "07:00",
+            "Liefkenshoek": "07:05",
+            "Kallosluis": "07:22",
+            "Zwijndrecht": "07:29",
+            "Sint Anna": "07:50",
+            "Steenplein": "08:00",
+            "Kruibeke": "08:17",
+            "Hemiksem": "08:30"
+          }
+        },
+        {
+          "trip": "T6",
+          "ship": "D1",
+          "times": {
+            "Lillo": "07:30",
+            "Liefkenshoek": "07:35",
+            "Kallosluis": "07:52",
+            "Zwijndrecht": "07:59",
+            "Sint Anna": "08:20",
+            "Steenplein": "08:30",
+            "Kruibeke": "08:47",
+            "Hemiksem": "09:00"
+          }
+        },
+        {
+          "trip": "T7",
+          "ship": "D2",
+          "times": {
+            "Lillo": "08:00",
+            "Liefkenshoek": "08:05",
+            "Kallosluis": "08:22",
+            "Zwijndrecht": "08:29",
+            "Sint Anna": "08:50",
+            "Steenplein": "09:00",
+            "Kruibeke": "09:17",
+            "Hemiksem": "09:30"
+          }
+        },
+        {
+          "trip": "T9",
+          "ship": "D5",
+          "times": {
+            "Lillo": "09:00",
+            "Liefkenshoek": "09:05",
+            "Kallosluis": "09:22",
+            "Zwijndrecht": "09:29",
+            "Sint Anna": "09:50",
+            "Steenplein": "10:00",
+            "Kruibeke": "10:17",
+            "Hemiksem": "10:30"
+          }
+        },
+        {
+          "trip": "T10",
+          "ship": "D6",
+          "times": {
+            "Lillo": "09:30",
+            "Liefkenshoek": "09:35",
+            "Kallosluis": "09:52",
+            "Zwijndrecht": "09:59",
+            "Sint Anna": "10:20",
+            "Steenplein": "10:30",
+            "Kruibeke": "10:47",
+            "Hemiksem": "11:00"
+          }
+        },
+        {
+          "trip": "T11",
+          "ship": "D3",
+          "times": {
+            "Lillo": "10:00",
+            "Liefkenshoek": "10:05",
+            "Kallosluis": "10:22",
+            "Zwijndrecht": "10:29",
+            "Sint Anna": "10:50",
+            "Steenplein": "11:00",
+            "Kruibeke": "11:17",
+            "Hemiksem": "11:30"
+          }
+        },
+        {
+          "trip": "T12",
+          "ship": "D1",
+          "times": {
+            "Lillo": "10:30",
+            "Liefkenshoek": "10:35",
+            "Kallosluis": "10:52",
+            "Zwijndrecht": "10:59",
+            "Sint Anna": "11:20",
+            "Steenplein": "11:30",
+            "Kruibeke": "11:47",
+            "Hemiksem": "12:00"
+          }
+        },
+        {
+          "trip": "T13",
+          "ship": "D2",
+          "times": {
+            "Lillo": "11:00",
+            "Liefkenshoek": "11:05",
+            "Kallosluis": "11:22",
+            "Zwijndrecht": "11:29",
+            "Sint Anna": "11:50",
+            "Steenplein": "12:00",
+            "Kruibeke": "12:17",
+            "Hemiksem": "12:30"
+          }
+        },
+        {
+          "trip": "T15",
+          "ship": "D5",
+          "times": {
+            "Lillo": "12:00",
+            "Liefkenshoek": "12:05",
+            "Kallosluis": "12:22",
+            "Zwijndrecht": "12:29",
+            "Sint Anna": "12:50",
+            "Steenplein": "13:00",
+            "Kruibeke": "13:17",
+            "Hemiksem": "13:30"
+          }
+        },
+        {
+          "trip": "T16",
+          "ship": "D6",
+          "times": {
+            "Lillo": "12:30",
+            "Liefkenshoek": "12:35",
+            "Kallosluis": "12:52",
+            "Zwijndrecht": "12:59",
+            "Sint Anna": "13:20",
+            "Steenplein": "13:30",
+            "Kruibeke": "13:47",
+            "Hemiksem": "14:00"
+          }
+        },
+        {
+          "trip": "T17",
+          "ship": "D3",
+          "times": {
+            "Lillo": "13:00",
+            "Liefkenshoek": "13:05",
+            "Kallosluis": "13:22",
+            "Zwijndrecht": "13:29",
+            "Sint Anna": "13:50",
+            "Steenplein": "14:00",
+            "Kruibeke": "14:17",
+            "Hemiksem": "14:30"
+          }
+        },
+        {
+          "trip": "T18",
+          "ship": "D1",
+          "times": {
+            "Lillo": "13:30",
+            "Liefkenshoek": "13:35",
+            "Kallosluis": "13:52",
+            "Zwijndrecht": "13:59",
+            "Sint Anna": "14:20",
+            "Steenplein": "14:30",
+            "Kruibeke": "14:47",
+            "Hemiksem": "15:00"
+          }
+        },
+        {
+          "trip": "T20",
+          "ship": "D2",
+          "times": {
+            "Lillo": "14:00",
+            "Liefkenshoek": "14:05",
+            "Kallosluis": "14:22",
+            "Zwijndrecht": "14:29",
+            "Sint Anna": "14:50",
+            "Steenplein": "15:00",
+            "Kruibeke": "15:17",
+            "Hemiksem": "15:30"
+          }
+        },
+        {
+          "trip": "T22",
+          "ship": "D5",
+          "times": {
+            "Lillo": "15:00",
+            "Liefkenshoek": "15:05",
+            "Kallosluis": "15:22",
+            "Zwijndrecht": "15:29",
+            "Sint Anna": "15:50",
+            "Steenplein": "16:00",
+            "Kruibeke": "16:17",
+            "Hemiksem": "16:30"
+          }
+        },
+        {
+          "trip": "T23",
+          "ship": "D6",
+          "times": {
+            "Lillo": "15:30",
+            "Liefkenshoek": "15:35",
+            "Kallosluis": "15:52",
+            "Zwijndrecht": "15:59",
+            "Sint Anna": "16:20",
+            "Steenplein": "16:30",
+            "Kruibeke": "16:47",
+            "Hemiksem": "17:00"
+          }
+        },
+        {
+          "trip": "T24",
+          "ship": "D3",
+          "times": {
+            "Lillo": "16:00",
+            "Liefkenshoek": "16:05",
+            "Kallosluis": "16:22",
+            "Zwijndrecht": "16:29",
+            "Sint Anna": "16:50",
+            "Steenplein": "17:00",
+            "Kruibeke": "17:17",
+            "Hemiksem": "17:30"
+          }
+        },
+        {
+          "trip": "T25",
+          "ship": "D1",
+          "times": {
+            "Lillo": "16:30",
+            "Liefkenshoek": "16:35",
+            "Kallosluis": "16:52",
+            "Zwijndrecht": "16:59",
+            "Sint Anna": "17:20",
+            "Steenplein": "17:30",
+            "Kruibeke": "17:47",
+            "Hemiksem": "18:00"
+          }
+        },
+        {
+          "trip": "T26",
+          "ship": "D2",
+          "times": {
+            "Lillo": "17:00",
+            "Liefkenshoek": "17:05",
+            "Kallosluis": "17:22",
+            "Zwijndrecht": "17:29",
+            "Sint Anna": "17:50",
+            "Steenplein": "18:00",
+            "Kruibeke": "18:17",
+            "Hemiksem": "18:30"
+          }
+        },
+        {
+          "trip": "T28",
+          "ship": "D5",
+          "times": {
+            "Lillo": "18:00",
+            "Liefkenshoek": "18:05",
+            "Kallosluis": "18:22",
+            "Zwijndrecht": "18:29",
+            "Sint Anna": "18:50",
+            "Steenplein": "19:00",
+            "Kruibeke": "19:17",
+            "Hemiksem": "19:30"
+          }
+        },
+        {
+          "trip": "T29",
+          "ship": "D6",
+          "times": {
+            "Lillo": "18:30",
+            "Liefkenshoek": "18:35",
+            "Kallosluis": "18:52",
+            "Zwijndrecht": "18:59",
+            "Sint Anna": "19:20",
+            "Steenplein": "19:30",
+            "Kruibeke": "19:47",
+            "Hemiksem": "20:00"
+          }
+        },
+        {
+          "trip": "T30",
+          "ship": "D3",
+          "times": {
+            "Lillo": "19:00",
+            "Liefkenshoek": "19:05",
+            "Kallosluis": "19:22",
+            "Zwijndrecht": "19:29",
+            "Sint Anna": "19:50",
+            "Steenplein": "20:00",
+            "Kruibeke": "20:17",
+            "Hemiksem": "20:30"
+          }
+        },
+        {
+          "trip": "T31",
+          "ship": "D1",
+          "times": {
+            "Lillo": "19:30",
+            "Liefkenshoek": "19:35",
+            "Kallosluis": "19:52",
+            "Zwijndrecht": "19:59",
+            "Sint Anna": "20:20",
+            "Steenplein": "20:30",
+            "Kruibeke": "20:47",
+            "Hemiksem": "21:00"
+          }
+        },
+        {
+          "trip": "T32",
+          "ship": "D2",
+          "times": {
+            "Lillo": "20:00",
+            "Liefkenshoek": "20:05",
+            "Kallosluis": "20:22",
+            "Zwijndrecht": "20:29",
+            "Sint Anna": "20:50",
+            "Steenplein": "21:00",
+            "Kruibeke": "21:17",
+            "Hemiksem": "21:30"
+          }
+        },
+        {
+          "trip": "T34",
+          "ship": "D5",
+          "times": {
+            "Lillo": "21:00",
+            "Liefkenshoek": "21:05",
+            "Kallosluis": "21:22",
+            "Zwijndrecht": "21:29",
+            "Sint Anna": "21:50",
+            "Steenplein": "22:00",
+            "Kruibeke": "22:17",
+            "Hemiksem": "22:30"
+          }
+        },
+        {
+          "trip": "T35",
+          "ship": "D6",
+          "times": {
+            "Lillo": "21:30",
+            "Liefkenshoek": "21:35",
+            "Kallosluis": "21:52",
+            "Zwijndrecht": "21:59",
+            "Sint Anna": "22:20"
+          }
+        },
+        {
+          "trip": "T36",
+          "ship": "D3",
+          "times": {
+            "Lillo": "22:00",
+            "Liefkenshoek": "22:05",
+            "Kallosluis": "22:22",
+            "Zwijndrecht": "22:29",
+            "Sint Anna": "22:50"
+          }
+        },
+        {
+          "trip": "T37",
+          "ship": "D1",
+          "times": {
+            "Lillo": "22:30",
+            "Liefkenshoek": "22:35",
+            "Kallosluis": "22:52",
+            "Zwijndrecht": "22:59",
+            "Sint Anna": "23:20"
+          }
+        },
+        {
+          "trip": "T38",
+          "ship": "D2",
+          "times": {
+            "Lillo": "23:00",
+            "Liefkenshoek": "23:05",
+            "Kallosluis": "23:22",
+            "Zwijndrecht": "23:29",
+            "Sint Anna": "23:50"
+          }
+        }
+      ]
+    },
+    "sunday_holiday": {
+      "stops_order": [
+        "Lillo",
+        "Liefkenshoek",
+        "Kallosluis",
+        "Zwijndrecht",
+        "Sint Anna",
+        "Steenplein",
+        "Kruibeke",
+        "Hemiksem"
+      ],
+      "trips": [
+        {
+          "trip": "T1",
+          "ship": "D3",
+          "times": {
+            "Kallosluis": "05:22",
+            "Zwijndrecht": "05:29",
+            "Sint Anna": "05:50"
+          }
+        },
+        {
+          "trip": "T2",
+          "ship": "D1",
+          "times": {
+            "Lillo": "05:30",
+            "Liefkenshoek": "05:35",
+            "Kallosluis": "05:52",
+            "Zwijndrecht": "05:59",
+            "Sint Anna": "06:20"
+          }
+        },
+        {
+          "trip": "T3",
+          "ship": "D2",
+          "times": {
+            "Lillo": "06:00",
+            "Liefkenshoek": "06:05",
+            "Kallosluis": "06:22",
+            "Zwijndrecht": "06:29",
+            "Sint Anna": "06:50"
+          }
+        },
+        {
+          "trip": "T5",
+          "ship": "D3",
+          "times": {
+            "Lillo": "07:00",
+            "Liefkenshoek": "07:05",
+            "Kallosluis": "07:22",
+            "Zwijndrecht": "07:29",
+            "Sint Anna": "07:50",
+            "Steenplein": "08:00",
+            "Kruibeke": "08:17",
+            "Hemiksem": "08:30"
+          }
+        },
+        {
+          "trip": "T6",
+          "ship": "D1",
+          "times": {
+            "Lillo": "07:30",
+            "Liefkenshoek": "07:35",
+            "Kallosluis": "07:52",
+            "Zwijndrecht": "07:59",
+            "Sint Anna": "08:20",
+            "Steenplein": "08:30",
+            "Kruibeke": "08:47",
+            "Hemiksem": "09:00"
+          }
+        },
+        {
+          "trip": "T7",
+          "ship": "D2",
+          "times": {
+            "Lillo": "08:00",
+            "Liefkenshoek": "08:05",
+            "Kallosluis": "08:22",
+            "Zwijndrecht": "08:29",
+            "Sint Anna": "08:50",
+            "Steenplein": "09:00",
+            "Kruibeke": "09:17",
+            "Hemiksem": "09:30"
+          }
+        },
+        {
+          "trip": "T9",
+          "ship": "D5",
+          "times": {
+            "Lillo": "09:00",
+            "Liefkenshoek": "09:05",
+            "Kallosluis": "09:22",
+            "Zwijndrecht": "09:29",
+            "Sint Anna": "09:50",
+            "Steenplein": "10:00",
+            "Kruibeke": "10:17",
+            "Hemiksem": "10:30"
+          }
+        },
+        {
+          "trip": "T10",
+          "ship": "D6",
+          "times": {
+            "Lillo": "09:30",
+            "Liefkenshoek": "09:35",
+            "Kallosluis": "09:52",
+            "Zwijndrecht": "09:59",
+            "Sint Anna": "10:20",
+            "Steenplein": "10:30",
+            "Kruibeke": "10:47",
+            "Hemiksem": "11:00"
+          }
+        },
+        {
+          "trip": "T11",
+          "ship": "D3",
+          "times": {
+            "Lillo": "10:00",
+            "Liefkenshoek": "10:05",
+            "Kallosluis": "10:22",
+            "Zwijndrecht": "10:29",
+            "Sint Anna": "10:50",
+            "Steenplein": "11:00",
+            "Kruibeke": "11:17",
+            "Hemiksem": "11:30"
+          }
+        },
+        {
+          "trip": "T12",
+          "ship": "D1",
+          "times": {
+            "Lillo": "10:30",
+            "Liefkenshoek": "10:35",
+            "Kallosluis": "10:52",
+            "Zwijndrecht": "10:59",
+            "Sint Anna": "11:20",
+            "Steenplein": "11:30",
+            "Kruibeke": "11:47",
+            "Hemiksem": "12:00"
+          }
+        },
+        {
+          "trip": "T13",
+          "ship": "D2",
+          "times": {
+            "Lillo": "11:00",
+            "Liefkenshoek": "11:05",
+            "Kallosluis": "11:22",
+            "Zwijndrecht": "11:29",
+            "Sint Anna": "11:50",
+            "Steenplein": "12:00",
+            "Kruibeke": "12:17",
+            "Hemiksem": "12:30"
+          }
+        },
+        {
+          "trip": "T15",
+          "ship": "D5",
+          "times": {
+            "Lillo": "12:00",
+            "Liefkenshoek": "12:05",
+            "Kallosluis": "12:22",
+            "Zwijndrecht": "12:29",
+            "Sint Anna": "12:50",
+            "Steenplein": "13:00",
+            "Kruibeke": "13:17",
+            "Hemiksem": "13:30"
+          }
+        },
+        {
+          "trip": "T16",
+          "ship": "D6",
+          "times": {
+            "Lillo": "12:30",
+            "Liefkenshoek": "12:35",
+            "Kallosluis": "12:52",
+            "Zwijndrecht": "12:59",
+            "Sint Anna": "13:20",
+            "Steenplein": "13:30",
+            "Kruibeke": "13:47",
+            "Hemiksem": "14:00"
+          }
+        },
+        {
+          "trip": "T17",
+          "ship": "D3",
+          "times": {
+            "Lillo": "13:00",
+            "Liefkenshoek": "13:05",
+            "Kallosluis": "13:22",
+            "Zwijndrecht": "13:29",
+            "Sint Anna": "13:50",
+            "Steenplein": "14:00",
+            "Kruibeke": "14:17",
+            "Hemiksem": "14:30"
+          }
+        },
+        {
+          "trip": "T18",
+          "ship": "D1",
+          "times": {
+            "Lillo": "13:30",
+            "Liefkenshoek": "13:35",
+            "Kallosluis": "13:52",
+            "Zwijndrecht": "13:59",
+            "Sint Anna": "14:20",
+            "Steenplein": "14:30",
+            "Kruibeke": "14:47",
+            "Hemiksem": "15:00"
+          }
+        },
+        {
+          "trip": "T20",
+          "ship": "D2",
+          "times": {
+            "Lillo": "14:00",
+            "Liefkenshoek": "14:05",
+            "Kallosluis": "14:22",
+            "Zwijndrecht": "14:29",
+            "Sint Anna": "14:50",
+            "Steenplein": "15:00",
+            "Kruibeke": "15:17",
+            "Hemiksem": "15:30"
+          }
+        },
+        {
+          "trip": "T22",
+          "ship": "D5",
+          "times": {
+            "Lillo": "15:00",
+            "Liefkenshoek": "15:05",
+            "Kallosluis": "15:22",
+            "Zwijndrecht": "15:29",
+            "Sint Anna": "15:50",
+            "Steenplein": "16:00",
+            "Kruibeke": "16:17",
+            "Hemiksem": "16:30"
+          }
+        },
+        {
+          "trip": "T23",
+          "ship": "D6",
+          "times": {
+            "Lillo": "15:30",
+            "Liefkenshoek": "15:35",
+            "Kallosluis": "15:52",
+            "Zwijndrecht": "15:59",
+            "Sint Anna": "16:20",
+            "Steenplein": "16:30",
+            "Kruibeke": "16:47",
+            "Hemiksem": "17:00"
+          }
+        },
+        {
+          "trip": "T24",
+          "ship": "D3",
+          "times": {
+            "Lillo": "16:00",
+            "Liefkenshoek": "16:05",
+            "Kallosluis": "16:22",
+            "Zwijndrecht": "16:29",
+            "Sint Anna": "16:50",
+            "Steenplein": "17:00",
+            "Kruibeke": "17:17",
+            "Hemiksem": "17:30"
+          }
+        },
+        {
+          "trip": "T25",
+          "ship": "D1",
+          "times": {
+            "Lillo": "16:30",
+            "Liefkenshoek": "16:35",
+            "Kallosluis": "16:52",
+            "Zwijndrecht": "16:59",
+            "Sint Anna": "17:20",
+            "Steenplein": "17:30",
+            "Kruibeke": "17:47",
+            "Hemiksem": "18:00"
+          }
+        },
+        {
+          "trip": "T26",
+          "ship": "D2",
+          "times": {
+            "Lillo": "17:00",
+            "Liefkenshoek": "17:05",
+            "Kallosluis": "17:22",
+            "Zwijndrecht": "17:29",
+            "Sint Anna": "17:50",
+            "Steenplein": "18:00",
+            "Kruibeke": "18:17",
+            "Hemiksem": "18:30"
+          }
+        },
+        {
+          "trip": "T28",
+          "ship": "D5",
+          "times": {
+            "Lillo": "18:00",
+            "Liefkenshoek": "18:05",
+            "Kallosluis": "18:22",
+            "Zwijndrecht": "18:29",
+            "Sint Anna": "18:50",
+            "Steenplein": "19:00",
+            "Kruibeke": "19:17",
+            "Hemiksem": "19:30"
+          }
+        },
+        {
+          "trip": "T29",
+          "ship": "D6",
+          "times": {
+            "Lillo": "18:30",
+            "Liefkenshoek": "18:35",
+            "Kallosluis": "18:52",
+            "Zwijndrecht": "18:59",
+            "Sint Anna": "19:20",
+            "Steenplein": "19:30",
+            "Kruibeke": "19:47",
+            "Hemiksem": "20:00"
+          }
+        },
+        {
+          "trip": "T30",
+          "ship": "D3",
+          "times": {
+            "Lillo": "19:00",
+            "Liefkenshoek": "19:05",
+            "Kallosluis": "19:22",
+            "Zwijndrecht": "19:29",
+            "Sint Anna": "19:50"
+          }
+        },
+        {
+          "trip": "T31",
+          "ship": "D1",
+          "times": {
+            "Lillo": "19:30",
+            "Liefkenshoek": "19:35",
+            "Kallosluis": "19:52",
+            "Zwijndrecht": "19:59",
+            "Sint Anna": "20:20"
+          }
+        },
+        {
+          "trip": "T32",
+          "ship": "D2",
+          "times": {
+            "Lillo": "20:00",
+            "Liefkenshoek": "20:05",
+            "Kallosluis": "20:22",
+            "Zwijndrecht": "20:29",
+            "Sint Anna": "20:50"
+          }
+        },
+        {
+          "trip": "T34",
+          "ship": "D5",
+          "times": {
+            "Lillo": "21:00",
+            "Liefkenshoek": "21:05",
+            "Kallosluis": "21:22",
+            "Zwijndrecht": "21:29",
+            "Sint Anna": "21:50"
+          }
+        },
+        {
+          "trip": "T35",
+          "ship": "D6",
+          "times": {
+            "Lillo": "21:30",
+            "Liefkenshoek": "21:35",
+            "Kallosluis": "21:52",
+            "Zwijndrecht": "21:59",
+            "Sint Anna": "22:20"
+          }
+        },
+        {
+          "trip": "T36",
+          "ship": "D2",
+          "times": {
+            "Lillo": "22:00",
+            "Liefkenshoek": "22:05",
+            "Kallosluis": "22:22",
+            "Zwijndrecht": "22:29",
+            "Sint Anna": "22:50"
+          }
+        },
+        {
+          "trip": "T38",
+          "ship": "D5",
+          "times": {
+            "Lillo": "23:00",
+            "Liefkenshoek": "23:05",
+            "Kallosluis": "23:22",
+            "Zwijndrecht": "23:29",
+            "Sint Anna": "23:50"
+          }
+        }
+      ]
+    }
+  },
+  "south_to_north": {
+    "weekday": {
+      "stops_order": [
+        "Hemiksem",
+        "Kruibeke",
+        "Steenplein",
+        "Sint Anna",
+        "Zwijndrecht",
+        "Kallo",
+        "Liefkenshoek",
+        "Lillo"
+      ],
+      "trips": [
+        {
+          "trip": "T1",
+          "ship": "D1",
+          "times": {
+            "Steenplein": "04:30",
+            "Sint Anna": "04:37",
+            "Zwijndrecht": "04:58",
+            "Kallo": "05:06",
+            "Liefkenshoek": "05:23",
+            "Lillo": "05:30"
+          }
+        },
+        {
+          "trip": "T2",
+          "ship": "D3",
+          "times": {
+            "Steenplein": "04:45",
+            "Sint Anna": "04:52",
+            "Zwijndrecht": "05:13",
+            "Kallo": "05:21"
+          }
+        },
+        {
+          "trip": "T3",
+          "ship": "D2",
+          "times": {
+            "Steenplein": "05:00",
+            "Sint Anna": "05:07",
+            "Zwijndrecht": "05:28",
+            "Kallo": "05:36",
+            "Liefkenshoek": "05:53",
+            "Lillo": "06:00"
+          }
+        },
+        {
+          "trip": "T5",
+          "ship": "D5",
+          "times": {
+            "Steenplein": "06:00",
+            "Sint Anna": "06:07",
+            "Zwijndrecht": "06:28",
+            "Kallo": "06:36",
+            "Liefkenshoek": "06:53",
+            "Lillo": "07:00"
+          }
+        },
+        {
+          "trip": "T6",
+          "ship": "D6",
+          "times": {
+            "Steenplein": "06:30",
+            "Sint Anna": "06:37",
+            "Zwijndrecht": "06:58",
+            "Kallo": "07:06"
+          }
+        },
+        {
+          "trip": "T7",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "06:30",
+            "Kruibeke": "06:40",
+            "Steenplein": "07:00",
+            "Sint Anna": "07:07",
+            "Zwijndrecht": "07:28",
+            "Kallo": "07:36",
+            "Liefkenshoek": "07:53",
+            "Lillo": "08:00"
+          }
+        },
+        {
+          "trip": "T8",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "07:00",
+            "Kruibeke": "07:10",
+            "Steenplein": "07:30",
+            "Sint Anna": "07:37",
+            "Zwijndrecht": "07:58",
+            "Kallo": "08:06",
+            "Liefkenshoek": "08:23",
+            "Lillo": "08:30"
+          }
+        },
+        {
+          "trip": "T9",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "07:30",
+            "Kruibeke": "07:40",
+            "Steenplein": "08:00",
+            "Sint Anna": "08:07",
+            "Zwijndrecht": "08:28",
+            "Kallo": "08:36",
+            "Liefkenshoek": "08:53",
+            "Lillo": "09:00"
+          }
+        },
+        {
+          "trip": "T10",
+          "ship": "D4",
+          "times": {
+            "Hemiksem": "08:00",
+            "Kruibeke": "08:10"
+          }
+        },
+        {
+          "trip": "T11",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "08:30",
+            "Kruibeke": "08:40",
+            "Steenplein": "09:00",
+            "Sint Anna": "09:07",
+            "Zwijndrecht": "09:28",
+            "Kallo": "09:36",
+            "Liefkenshoek": "09:53",
+            "Lillo": "10:00"
+          }
+        },
+        {
+          "trip": "T12",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "09:00",
+            "Kruibeke": "09:10",
+            "Steenplein": "09:30",
+            "Sint Anna": "09:37",
+            "Zwijndrecht": "09:58",
+            "Kallo": "10:06",
+            "Liefkenshoek": "10:23",
+            "Lillo": "10:30"
+          }
+        },
+        {
+          "trip": "T13",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "09:30",
+            "Kruibeke": "09:40",
+            "Steenplein": "10:00",
+            "Sint Anna": "10:07",
+            "Zwijndrecht": "10:28",
+            "Kallo": "10:36",
+            "Liefkenshoek": "10:53",
+            "Lillo": "11:00"
+          }
+        },
+        {
+          "trip": "T14",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "10:00",
+            "Kruibeke": "10:10",
+            "Steenplein": "10:30",
+            "Sint Anna": "10:37",
+            "Zwijndrecht": "10:58",
+            "Kallo": "11:06",
+            "Liefkenshoek": "11:23",
+            "Lillo": "11:30"
+          }
+        },
+        {
+          "trip": "T15",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "10:30",
+            "Kruibeke": "10:40",
+            "Steenplein": "11:00",
+            "Sint Anna": "11:07",
+            "Zwijndrecht": "11:28",
+            "Kallo": "11:36",
+            "Liefkenshoek": "11:53",
+            "Lillo": "12:00"
+          }
+        },
+        {
+          "trip": "T17",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "11:30",
+            "Kruibeke": "11:40",
+            "Steenplein": "12:00",
+            "Sint Anna": "12:07",
+            "Zwijndrecht": "12:28",
+            "Kallo": "12:36",
+            "Liefkenshoek": "12:53",
+            "Lillo": "13:00"
+          }
+        },
+        {
+          "trip": "T18",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "12:00",
+            "Kruibeke": "12:10",
+            "Steenplein": "12:30",
+            "Sint Anna": "12:37",
+            "Zwijndrecht": "12:58",
+            "Kallo": "13:06",
+            "Liefkenshoek": "13:23",
+            "Lillo": "13:30"
+          }
+        },
+        {
+          "trip": "T19",
+          "ship": "D1",
+          "times": {
+            "Steenplein": "12:45",
+            "Sint Anna": "12:52",
+            "Zwijndrecht": "13:13",
+            "Kallo": "13:21",
+            "Liefkenshoek": "13:38",
+            "Lillo": "13:45"
+          }
+        },
+        {
+          "trip": "T20",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "12:30",
+            "Kruibeke": "12:40",
+            "Steenplein": "13:00",
+            "Sint Anna": "13:07",
+            "Zwijndrecht": "13:28",
+            "Kallo": "13:36",
+            "Liefkenshoek": "13:53",
+            "Lillo": "14:00"
+          }
+        },
+        {
+          "trip": "T22",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "13:30",
+            "Kruibeke": "13:40",
+            "Steenplein": "14:00",
+            "Sint Anna": "14:07",
+            "Zwijndrecht": "14:28",
+            "Kallo": "14:36",
+            "Liefkenshoek": "14:53",
+            "Lillo": "15:00"
+          }
+        },
+        {
+          "trip": "T24",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "14:30",
+            "Kruibeke": "14:40",
+            "Steenplein": "15:00",
+            "Sint Anna": "15:07",
+            "Zwijndrecht": "15:28",
+            "Kallo": "15:36",
+            "Liefkenshoek": "15:53",
+            "Lillo": "16:00"
+          }
+        },
+        {
+          "trip": "T25",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "15:00",
+            "Kruibeke": "15:10",
+            "Steenplein": "15:30",
+            "Sint Anna": "15:37",
+            "Zwijndrecht": "15:58",
+            "Kallo": "16:06",
+            "Liefkenshoek": "16:23",
+            "Lillo": "16:30"
+          }
+        },
+        {
+          "trip": "T26",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "15:30",
+            "Kruibeke": "15:40",
+            "Steenplein": "16:00",
+            "Sint Anna": "16:07",
+            "Zwijndrecht": "16:28",
+            "Kallo": "16:36",
+            "Liefkenshoek": "16:53",
+            "Lillo": "17:00"
+          }
+        },
+        {
+          "trip": "T27",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "16:00",
+            "Kruibeke": "16:10",
+            "Steenplein": "16:30",
+            "Sint Anna": "16:37",
+            "Zwijndrecht": "16:58",
+            "Kallo": "17:06",
+            "Liefkenshoek": "17:23",
+            "Lillo": "17:30"
+          }
+        },
+        {
+          "trip": "T28",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "16:30",
+            "Kruibeke": "16:40",
+            "Steenplein": "17:00",
+            "Sint Anna": "17:07",
+            "Zwijndrecht": "17:28",
+            "Kallo": "17:36",
+            "Liefkenshoek": "17:53",
+            "Lillo": "18:00"
+          }
+        },
+        {
+          "trip": "T30",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "17:30",
+            "Kruibeke": "17:40",
+            "Steenplein": "18:00",
+            "Sint Anna": "18:07",
+            "Zwijndrecht": "18:28",
+            "Kallo": "18:36",
+            "Liefkenshoek": "18:53",
+            "Lillo": "19:00"
+          }
+        },
+        {
+          "trip": "T31",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "18:00",
+            "Kruibeke": "18:10",
+            "Steenplein": "18:30",
+            "Sint Anna": "18:37",
+            "Zwijndrecht": "18:58",
+            "Kallo": "19:06",
+            "Liefkenshoek": "19:23",
+            "Lillo": "19:30"
+          }
+        },
+        {
+          "trip": "T32",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "18:30",
+            "Kruibeke": "18:40",
+            "Steenplein": "19:00",
+            "Sint Anna": "19:07",
+            "Zwijndrecht": "19:28",
+            "Kallo": "19:36",
+            "Liefkenshoek": "19:53",
+            "Lillo": "20:00"
+          }
+        },
+        {
+          "trip": "T33",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "19:00",
+            "Kruibeke": "19:10",
+            "Steenplein": "19:30"
+          }
+        },
+        {
+          "trip": "T34",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "19:30",
+            "Kruibeke": "19:40",
+            "Steenplein": "20:00",
+            "Sint Anna": "20:07",
+            "Zwijndrecht": "20:28",
+            "Kallo": "20:36",
+            "Liefkenshoek": "20:53",
+            "Lillo": "21:00"
+          }
+        },
+        {
+          "trip": "T35",
+          "ship": "D4",
+          "times": {
+            "Hemiksem": "20:00",
+            "Kruibeke": "20:10",
+            "Steenplein": "20:30",
+            "Sint Anna": "20:37",
+            "Zwijndrecht": "20:58",
+            "Kallo": "21:06",
+            "Liefkenshoek": "21:23",
+            "Lillo": "21:30"
+          }
+        },
+        {
+          "trip": "T36",
+          "ship": "D3",
+          "times": {
+            "Steenplein": "21:00",
+            "Sint Anna": "21:07",
+            "Zwijndrecht": "21:28",
+            "Kallo": "21:36",
+            "Liefkenshoek": "21:53",
+            "Lillo": "22:00"
+          }
+        },
+        {
+          "trip": "T38",
+          "ship": "D2",
+          "times": {
+            "Steenplein": "22:00",
+            "Sint Anna": "22:07",
+            "Zwijndrecht": "22:28",
+            "Kallo": "22:36",
+            "Liefkenshoek": "22:53",
+            "Lillo": "23:00"
+          }
+        }
+      ]
+    },
+    "saturday": {
+      "stops_order": [
+        "Hemiksem",
+        "Kruibeke",
+        "Steenplein",
+        "Sint Anna",
+        "Zwijndrecht",
+        "Kallo",
+        "Liefkenshoek",
+        "Lillo"
+      ],
+      "trips": [
+        {
+          "trip": "T1",
+          "ship": "D1",
+          "times": {
+            "Steenplein": "04:30",
+            "Sint Anna": "04:37",
+            "Zwijndrecht": "04:58",
+            "Kallo": "05:06",
+            "Liefkenshoek": "05:23",
+            "Lillo": "05:30"
+          }
+        },
+        {
+          "trip": "T2",
+          "ship": "D2",
+          "times": {
+            "Steenplein": "05:00",
+            "Sint Anna": "05:07",
+            "Zwijndrecht": "05:28",
+            "Kallo": "05:36",
+            "Liefkenshoek": "05:53",
+            "Lillo": "06:00"
+          }
+        },
+        {
+          "trip": "T4",
+          "ship": "D3",
+          "times": {
+            "Steenplein": "06:00",
+            "Sint Anna": "06:07",
+            "Zwijndrecht": "06:28",
+            "Kallo": "06:36",
+            "Liefkenshoek": "06:53",
+            "Lillo": "07:00"
+          }
+        },
+        {
+          "trip": "T5",
+          "ship": "D1",
+          "times": {
+            "Steenplein": "06:30",
+            "Sint Anna": "06:37",
+            "Zwijndrecht": "06:58",
+            "Kallo": "07:06",
+            "Liefkenshoek": "07:23",
+            "Lillo": "07:30"
+          }
+        },
+        {
+          "trip": "T6",
+          "ship": "D2",
+          "times": {
+            "Steenplein": "07:00",
+            "Sint Anna": "07:07",
+            "Zwijndrecht": "07:28",
+            "Kallo": "07:36",
+            "Liefkenshoek": "07:53",
+            "Lillo": "08:00"
+          }
+        },
+        {
+          "trip": "T8",
+          "ship": "D5",
+          "times": {
+            "Steenplein": "08:00",
+            "Sint Anna": "08:07",
+            "Zwijndrecht": "08:28",
+            "Kallo": "08:36",
+            "Liefkenshoek": "08:53",
+            "Lillo": "09:00"
+          }
+        },
+        {
+          "trip": "T9",
+          "ship": "D6",
+          "times": {
+            "Steenplein": "08:30",
+            "Sint Anna": "08:37",
+            "Zwijndrecht": "08:58",
+            "Kallo": "09:06",
+            "Liefkenshoek": "09:23",
+            "Lillo": "09:30"
+          }
+        },
+        {
+          "trip": "T10",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "08:30",
+            "Kruibeke": "08:40",
+            "Steenplein": "09:00",
+            "Sint Anna": "09:07",
+            "Zwijndrecht": "09:28",
+            "Kallo": "09:36",
+            "Liefkenshoek": "09:53",
+            "Lillo": "10:00"
+          }
+        },
+        {
+          "trip": "T11",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "09:00",
+            "Kruibeke": "09:10",
+            "Steenplein": "09:30",
+            "Sint Anna": "09:37",
+            "Zwijndrecht": "09:58",
+            "Kallo": "10:06",
+            "Liefkenshoek": "10:23",
+            "Lillo": "10:30"
+          }
+        },
+        {
+          "trip": "T12",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "09:30",
+            "Kruibeke": "09:40",
+            "Steenplein": "10:00",
+            "Sint Anna": "10:07",
+            "Zwijndrecht": "10:28",
+            "Kallo": "10:36",
+            "Liefkenshoek": "10:53",
+            "Lillo": "11:00"
+          }
+        },
+        {
+          "trip": "T14",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "10:30",
+            "Kruibeke": "10:40",
+            "Steenplein": "11:00",
+            "Sint Anna": "11:07",
+            "Zwijndrecht": "11:28",
+            "Kallo": "11:36",
+            "Liefkenshoek": "11:53",
+            "Lillo": "12:00"
+          }
+        },
+        {
+          "trip": "T15",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "11:00",
+            "Kruibeke": "11:10",
+            "Steenplein": "11:30",
+            "Sint Anna": "11:37",
+            "Zwijndrecht": "11:58",
+            "Kallo": "12:06",
+            "Liefkenshoek": "12:23",
+            "Lillo": "12:30"
+          }
+        },
+        {
+          "trip": "T16",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "11:30",
+            "Kruibeke": "11:40",
+            "Steenplein": "12:00",
+            "Sint Anna": "12:07",
+            "Zwijndrecht": "12:28",
+            "Kallo": "12:36",
+            "Liefkenshoek": "12:53",
+            "Lillo": "13:00"
+          }
+        },
+        {
+          "trip": "T17",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "12:00",
+            "Kruibeke": "12:10",
+            "Steenplein": "12:30",
+            "Sint Anna": "12:37",
+            "Zwijndrecht": "12:58",
+            "Kallo": "13:06",
+            "Liefkenshoek": "13:23",
+            "Lillo": "13:30"
+          }
+        },
+        {
+          "trip": "T18",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "12:30",
+            "Kruibeke": "12:40",
+            "Steenplein": "13:00",
+            "Sint Anna": "13:07",
+            "Zwijndrecht": "13:28",
+            "Kallo": "13:36",
+            "Liefkenshoek": "13:53",
+            "Lillo": "14:00"
+          }
+        },
+        {
+          "trip": "T20",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "13:30",
+            "Kruibeke": "13:40",
+            "Steenplein": "14:00",
+            "Sint Anna": "14:07",
+            "Zwijndrecht": "14:28",
+            "Kallo": "14:36",
+            "Liefkenshoek": "14:53",
+            "Lillo": "15:00"
+          }
+        },
+        {
+          "trip": "T21",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "14:00",
+            "Kruibeke": "14:10",
+            "Steenplein": "14:30",
+            "Sint Anna": "14:37",
+            "Zwijndrecht": "14:58",
+            "Kallo": "15:06",
+            "Liefkenshoek": "15:23",
+            "Lillo": "15:30"
+          }
+        },
+        {
+          "trip": "T22",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "14:30",
+            "Kruibeke": "14:40",
+            "Steenplein": "15:00",
+            "Sint Anna": "15:07",
+            "Zwijndrecht": "15:28",
+            "Kallo": "15:36",
+            "Liefkenshoek": "15:53",
+            "Lillo": "16:00"
+          }
+        },
+        {
+          "trip": "T23",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "15:00",
+            "Kruibeke": "15:10",
+            "Steenplein": "15:30",
+            "Sint Anna": "15:37",
+            "Zwijndrecht": "15:58",
+            "Kallo": "16:06",
+            "Liefkenshoek": "16:23",
+            "Lillo": "16:30"
+          }
+        },
+        {
+          "trip": "T24",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "15:30",
+            "Kruibeke": "15:40",
+            "Steenplein": "16:00",
+            "Sint Anna": "16:07",
+            "Zwijndrecht": "16:28",
+            "Kallo": "16:36",
+            "Liefkenshoek": "16:53",
+            "Lillo": "17:00"
+          }
+        },
+        {
+          "trip": "T26",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "16:30",
+            "Kruibeke": "16:40",
+            "Steenplein": "17:00",
+            "Sint Anna": "17:07",
+            "Zwijndrecht": "17:28",
+            "Kallo": "17:36",
+            "Liefkenshoek": "17:53",
+            "Lillo": "18:00"
+          }
+        },
+        {
+          "trip": "T27",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "17:00",
+            "Kruibeke": "17:10",
+            "Steenplein": "17:30",
+            "Sint Anna": "17:37",
+            "Zwijndrecht": "17:58",
+            "Kallo": "18:06",
+            "Liefkenshoek": "18:23",
+            "Lillo": "18:30"
+          }
+        },
+        {
+          "trip": "T28",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "17:30",
+            "Kruibeke": "17:40",
+            "Steenplein": "18:00",
+            "Sint Anna": "18:07",
+            "Zwijndrecht": "18:28",
+            "Kallo": "18:36",
+            "Liefkenshoek": "18:53",
+            "Lillo": "19:00"
+          }
+        },
+        {
+          "trip": "T29",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "18:00",
+            "Kruibeke": "18:10",
+            "Steenplein": "18:30",
+            "Sint Anna": "18:37",
+            "Zwijndrecht": "18:58",
+            "Kallo": "19:06",
+            "Liefkenshoek": "19:23",
+            "Lillo": "19:30"
+          }
+        },
+        {
+          "trip": "T30",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "18:30",
+            "Kruibeke": "18:40",
+            "Steenplein": "19:00",
+            "Sint Anna": "19:07",
+            "Zwijndrecht": "19:28",
+            "Kallo": "19:36",
+            "Liefkenshoek": "19:53",
+            "Lillo": "20:00"
+          }
+        },
+        {
+          "trip": "T32",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "19:30",
+            "Kruibeke": "19:40",
+            "Steenplein": "20:00",
+            "Sint Anna": "20:07",
+            "Zwijndrecht": "20:28",
+            "Kallo": "20:36",
+            "Liefkenshoek": "20:53",
+            "Lillo": "21:00"
+          }
+        },
+        {
+          "trip": "T33",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "20:00",
+            "Kruibeke": "20:10",
+            "Steenplein": "20:30",
+            "Sint Anna": "20:37",
+            "Zwijndrecht": "20:58",
+            "Kallo": "21:06",
+            "Liefkenshoek": "21:23",
+            "Lillo": "21:30"
+          }
+        },
+        {
+          "trip": "T34",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "20:30",
+            "Kruibeke": "20:40",
+            "Steenplein": "21:00",
+            "Sint Anna": "21:07",
+            "Zwijndrecht": "21:28",
+            "Kallo": "21:36",
+            "Liefkenshoek": "21:53",
+            "Lillo": "22:00"
+          }
+        },
+        {
+          "trip": "T35",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "21:00",
+            "Kruibeke": "21:10",
+            "Steenplein": "21:30",
+            "Sint Anna": "21:37",
+            "Zwijndrecht": "21:58",
+            "Kallo": "22:06",
+            "Liefkenshoek": "22:23",
+            "Lillo": "22:30"
+          }
+        },
+        {
+          "trip": "T36",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "21:30",
+            "Kruibeke": "21:40",
+            "Steenplein": "22:00",
+            "Sint Anna": "22:07",
+            "Zwijndrecht": "22:28",
+            "Kallo": "22:36",
+            "Liefkenshoek": "22:53",
+            "Lillo": "23:00"
+          }
+        },
+        {
+          "trip": "T38",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "22:30",
+            "Kruibeke": "22:40",
+            "Steenplein": "23:00",
+            "Sint Anna": "23:07"
+          }
+        }
+      ]
+    },
+    "sunday_holiday": {
+      "stops_order": [
+        "Hemiksem",
+        "Kruibeke",
+        "Steenplein",
+        "Sint Anna",
+        "Zwijndrecht",
+        "Kallo",
+        "Liefkenshoek",
+        "Lillo"
+      ],
+      "trips": [
+        {
+          "trip": "T1",
+          "ship": "D1",
+          "times": {
+            "Steenplein": "04:30",
+            "Sint Anna": "04:37",
+            "Zwijndrecht": "04:58",
+            "Kallo": "05:06",
+            "Liefkenshoek": "05:23",
+            "Lillo": "05:30"
+          }
+        },
+        {
+          "trip": "T2",
+          "ship": "D2",
+          "times": {
+            "Steenplein": "05:00",
+            "Sint Anna": "05:07",
+            "Zwijndrecht": "05:28",
+            "Kallo": "05:36",
+            "Liefkenshoek": "05:53",
+            "Lillo": "06:00"
+          }
+        },
+        {
+          "trip": "T4",
+          "ship": "D3",
+          "times": {
+            "Steenplein": "06:00",
+            "Sint Anna": "06:07",
+            "Zwijndrecht": "06:28",
+            "Kallo": "06:36",
+            "Liefkenshoek": "06:53",
+            "Lillo": "07:00"
+          }
+        },
+        {
+          "trip": "T5",
+          "ship": "D1",
+          "times": {
+            "Steenplein": "06:30",
+            "Sint Anna": "06:37",
+            "Zwijndrecht": "06:58",
+            "Kallo": "07:06",
+            "Liefkenshoek": "07:23",
+            "Lillo": "07:30"
+          }
+        },
+        {
+          "trip": "T6",
+          "ship": "D2",
+          "times": {
+            "Steenplein": "07:00",
+            "Sint Anna": "07:07",
+            "Zwijndrecht": "07:28",
+            "Kallo": "07:36",
+            "Liefkenshoek": "07:53",
+            "Lillo": "08:00"
+          }
+        },
+        {
+          "trip": "T8",
+          "ship": "D5",
+          "times": {
+            "Steenplein": "08:00",
+            "Sint Anna": "08:07",
+            "Zwijndrecht": "08:28",
+            "Kallo": "08:36",
+            "Liefkenshoek": "08:53",
+            "Lillo": "09:00"
+          }
+        },
+        {
+          "trip": "T9",
+          "ship": "D6",
+          "times": {
+            "Steenplein": "08:30",
+            "Sint Anna": "08:37",
+            "Zwijndrecht": "08:58",
+            "Kallo": "09:06",
+            "Liefkenshoek": "09:23",
+            "Lillo": "09:30"
+          }
+        },
+        {
+          "trip": "T10",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "08:30",
+            "Kruibeke": "08:40",
+            "Steenplein": "09:00",
+            "Sint Anna": "09:07",
+            "Zwijndrecht": "09:28",
+            "Kallo": "09:36",
+            "Liefkenshoek": "09:53",
+            "Lillo": "10:00"
+          }
+        },
+        {
+          "trip": "T11",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "09:00",
+            "Kruibeke": "09:10",
+            "Steenplein": "09:30",
+            "Sint Anna": "09:37",
+            "Zwijndrecht": "09:58",
+            "Kallo": "10:06",
+            "Liefkenshoek": "10:23",
+            "Lillo": "10:30"
+          }
+        },
+        {
+          "trip": "T12",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "09:30",
+            "Kruibeke": "09:40",
+            "Steenplein": "10:00",
+            "Sint Anna": "10:07",
+            "Zwijndrecht": "10:28",
+            "Kallo": "10:36",
+            "Liefkenshoek": "10:53",
+            "Lillo": "11:00"
+          }
+        },
+        {
+          "trip": "T14",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "10:30",
+            "Kruibeke": "10:40",
+            "Steenplein": "11:00",
+            "Sint Anna": "11:07",
+            "Zwijndrecht": "11:28",
+            "Kallo": "11:36",
+            "Liefkenshoek": "11:53",
+            "Lillo": "12:00"
+          }
+        },
+        {
+          "trip": "T15",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "11:00",
+            "Kruibeke": "11:10",
+            "Steenplein": "11:30",
+            "Sint Anna": "11:37",
+            "Zwijndrecht": "11:58",
+            "Kallo": "12:06",
+            "Liefkenshoek": "12:23",
+            "Lillo": "12:30"
+          }
+        },
+        {
+          "trip": "T16",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "11:30",
+            "Kruibeke": "11:40",
+            "Steenplein": "12:00",
+            "Sint Anna": "12:07",
+            "Zwijndrecht": "12:28",
+            "Kallo": "12:36",
+            "Liefkenshoek": "12:53",
+            "Lillo": "13:00"
+          }
+        },
+        {
+          "trip": "T17",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "12:00",
+            "Kruibeke": "12:10",
+            "Steenplein": "12:30",
+            "Sint Anna": "12:37",
+            "Zwijndrecht": "12:58",
+            "Kallo": "13:06",
+            "Liefkenshoek": "13:23",
+            "Lillo": "13:30"
+          }
+        },
+        {
+          "trip": "T18",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "12:30",
+            "Kruibeke": "12:40",
+            "Steenplein": "13:00",
+            "Sint Anna": "13:07",
+            "Zwijndrecht": "13:28",
+            "Kallo": "13:36",
+            "Liefkenshoek": "13:53",
+            "Lillo": "14:00"
+          }
+        },
+        {
+          "trip": "T20",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "13:30",
+            "Kruibeke": "13:40",
+            "Steenplein": "14:00",
+            "Sint Anna": "14:07",
+            "Zwijndrecht": "14:28",
+            "Kallo": "14:36",
+            "Liefkenshoek": "14:53",
+            "Lillo": "15:00"
+          }
+        },
+        {
+          "trip": "T21",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "14:00",
+            "Kruibeke": "14:10",
+            "Steenplein": "14:30",
+            "Sint Anna": "14:37",
+            "Zwijndrecht": "14:58",
+            "Kallo": "15:06",
+            "Liefkenshoek": "15:23",
+            "Lillo": "15:30"
+          }
+        },
+        {
+          "trip": "T22",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "14:30",
+            "Kruibeke": "14:40",
+            "Steenplein": "15:00",
+            "Sint Anna": "15:07",
+            "Zwijndrecht": "15:28",
+            "Kallo": "15:36",
+            "Liefkenshoek": "15:53",
+            "Lillo": "16:00"
+          }
+        },
+        {
+          "trip": "T23",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "15:00",
+            "Kruibeke": "15:10",
+            "Steenplein": "15:30",
+            "Sint Anna": "15:37",
+            "Zwijndrecht": "15:58",
+            "Kallo": "16:06",
+            "Liefkenshoek": "16:23",
+            "Lillo": "16:30"
+          }
+        },
+        {
+          "trip": "T24",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "15:30",
+            "Kruibeke": "15:40",
+            "Steenplein": "16:00",
+            "Sint Anna": "16:07",
+            "Zwijndrecht": "16:28",
+            "Kallo": "16:36",
+            "Liefkenshoek": "16:53",
+            "Lillo": "17:00"
+          }
+        },
+        {
+          "trip": "T26",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "16:30",
+            "Kruibeke": "16:40",
+            "Steenplein": "17:00",
+            "Sint Anna": "17:07",
+            "Zwijndrecht": "17:28",
+            "Kallo": "17:36",
+            "Liefkenshoek": "17:53",
+            "Lillo": "18:00"
+          }
+        },
+        {
+          "trip": "T27",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "17:00",
+            "Kruibeke": "17:10",
+            "Steenplein": "17:30",
+            "Sint Anna": "17:37",
+            "Zwijndrecht": "17:58",
+            "Kallo": "18:06",
+            "Liefkenshoek": "18:23",
+            "Lillo": "18:30"
+          }
+        },
+        {
+          "trip": "T28",
+          "ship": "D3",
+          "times": {
+            "Hemiksem": "17:30",
+            "Kruibeke": "17:40",
+            "Steenplein": "18:00",
+            "Sint Anna": "18:07",
+            "Zwijndrecht": "18:28",
+            "Kallo": "18:36",
+            "Liefkenshoek": "18:53",
+            "Lillo": "19:00"
+          }
+        },
+        {
+          "trip": "T29",
+          "ship": "D1",
+          "times": {
+            "Hemiksem": "18:00",
+            "Kruibeke": "18:10",
+            "Steenplein": "18:30",
+            "Sint Anna": "18:37",
+            "Zwijndrecht": "18:58",
+            "Kallo": "19:06",
+            "Liefkenshoek": "19:23",
+            "Lillo": "19:30"
+          }
+        },
+        {
+          "trip": "T30",
+          "ship": "D2",
+          "times": {
+            "Hemiksem": "18:30",
+            "Kruibeke": "18:40",
+            "Steenplein": "19:00",
+            "Sint Anna": "19:07",
+            "Zwijndrecht": "19:28",
+            "Kallo": "19:36",
+            "Liefkenshoek": "19:53",
+            "Lillo": "20:00"
+          }
+        },
+        {
+          "trip": "T32",
+          "ship": "D5",
+          "times": {
+            "Hemiksem": "19:30",
+            "Kruibeke": "19:40",
+            "Steenplein": "20:00",
+            "Sint Anna": "20:07",
+            "Zwijndrecht": "20:28",
+            "Kallo": "20:36",
+            "Liefkenshoek": "20:53",
+            "Lillo": "21:00"
+          }
+        },
+        {
+          "trip": "T33",
+          "ship": "D6",
+          "times": {
+            "Hemiksem": "20:00",
+            "Kruibeke": "20:10",
+            "Steenplein": "20:30",
+            "Sint Anna": "20:37",
+            "Zwijndrecht": "20:58",
+            "Kallo": "21:06",
+            "Liefkenshoek": "21:23",
+            "Lillo": "21:30"
+          }
+        },
+        {
+          "trip": "T34",
+          "ship": "D2",
+          "times": {
+            "Steenplein": "21:00",
+            "Sint Anna": "21:07",
+            "Zwijndrecht": "21:28",
+            "Kallo": "21:36",
+            "Liefkenshoek": "21:53",
+            "Lillo": "22:00"
+          }
+        },
+        {
+          "trip": "T36",
+          "ship": "D5",
+          "times": {
+            "Steenplein": "22:00",
+            "Sint Anna": "22:07",
+            "Zwijndrecht": "22:28",
+            "Kallo": "22:36",
+            "Liefkenshoek": "22:53",
+            "Lillo": "23:00"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-07T19:28:45Z",
+  "source_commit": "caa7b6cf779ee0dc9132ab6a73e0ec7166dbf582",
+  "files": {
+    "waterbus.json": {
+      "bytes": 66511,
+      "sha256": "3aff221be26e42729890986e81c7c0305f8660a9002711148edef1b6f0387836"
+    },
+    "sint_anna_ferry.json": {
+      "bytes": 6698,
+      "sha256": "8ee4228714c3ca7ca56113bdf00cb2286c41717c29f14d1c9821f96f3a89c973"
+    }
+  }
+}
